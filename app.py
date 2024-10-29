@@ -1,16 +1,12 @@
 import gradio as gr
 from PIL import Image
 import os
-
-import spaces
-
 from OmniGen import OmniGenPipeline
 
 pipe = OmniGenPipeline.from_pretrained(
     "Shitao/OmniGen-v1"
 )
 
-@spaces.GPU(duration=160)
 def generate_image(text, img1, img2, img3, height, width, guidance_scale, img_guidance_scale, inference_steps, seed, separate_cfg_infer, offload_model,
             use_input_image_size_as_output, max_input_image_size):
     input_images = [img1, img2, img3]
