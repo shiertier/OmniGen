@@ -419,4 +419,4 @@ with gr.Blocks() as demo:
     gr.Markdown(article)
 
 # launch
-demo.launch()
+demo.launch(server_name='0.0.0.0',port=7860)
